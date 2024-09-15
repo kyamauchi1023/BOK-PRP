@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decoding Strategy with Perceptual Rating Prediction for Language Model-Based Text-to-Speech Synthesis</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./stylesheet.css">
+</head>
+<header>
+  <h1 class="head-1">
+    <a><br>Decoding Strategy with Perceptual Rating Prediction<br>for Language Model-Based Text-to-Speech Synthesis</a>
+  </h1>	
+  <h3 class="head-2">
+    <i>Anonymous submission to NeurIPS 2024 Workshop Audio Imagination</i>
+  </h3>	
+</header>
+
+<body>
+  <h2 class="style-1">Demo page</h2>
+  <h3 class="style-1">Compared methods</h3>
+  <p>
+    We present samples of synthesized speech using the following decoding strategies.
+  </p>
+  <ul>
+    <li><b>・Greedy decoding</b></li>
+    <li><b>・Naive sampling</b></li>
+    <li><b>・Top-k top-p sampling</b></li>
+    <li><b>・Sequence-wise BOK-PRP (proposed)</b></li>
+    <li><b>・Block-wise BOK-PRP (proposed)</b></li>
+  </ul>
+
+  <h3 class="style-1">Samples of synthetic speech</h3>
+
+  <div class="table-container">
+    <table>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Greedy decoding</td>
+          <td style="text-align: center"><audio src="wav/greedy_search/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/greedy_search/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/greedy_search/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Naive sampling</td>
+          <td style="text-align: center"><audio src="wav/naive_sampling/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/naive_sampling/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/naive_sampling/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Top-k top-p sampling</td>
+          <td style="text-align: center"><audio src="wav/topk_topp_sampling/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/topk_topp_sampling/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/topk_topp_sampling/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Sequence-wise BOK-PRP (proposed)</td>
+          <td style="text-align: center"><audio src="wav/sequence_level_best_of_K/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/sequence_level_best_of_K/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/sequence_level_best_of_K/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Block-wise BOK-PRP (proposed)</td>
+          <td style="text-align: center"><audio src="wav/block_wise_best_of_K/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/block_wise_best_of_K/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/block_wise_best_of_K/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td style="text-align: center">Ground truth</td>
+          <td style="text-align: center"><audio src="wav/ground_truth/LJ050-0029.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/ground_truth/LJ050-0048.wav" controls></audio></td>
+          <td style="text-align: center"><audio src="wav/ground_truth/LJ050-0061.wav" controls></audio></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer></footer>
+</body>
+  

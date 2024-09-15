@@ -1,3 +1,3 @@
-# BOK-PRP
+# BOK-predPRs
 
-Demo page for BOK-PRP
+Demo page for BOK-predPRs
